@@ -88,6 +88,8 @@ def get_asa_process():
             capture_output=True,
             text=True,
             creationflags=subprocess.CREATE_NO_WINDOW,
+            encoding="cp932",
+            errors="replace",
         )
 
         return "ArkAscendedServer.exe" in result.stdout
